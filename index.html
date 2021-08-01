@@ -18,10 +18,11 @@
             <p>Where Taste Kisses the Expectation!!</p>
         </div>  
     </header>
-    <main class="">
+    <br><br>
+    <main class="container">
         <article class="card">
             <div class="card-header">
-                Read about Great pizzas
+                <h2>Read about Great pizzas, Before you know what to order!!!</h2>
             </div>
             <div class="padd-up">
                 <section class="">
@@ -31,127 +32,183 @@
                     <p><b><i>When you order your pizza, Check on the toppings and the crust besides it's size.</i></b> </p>
                 </section>
             </div>
+            <div class="card-footer" style="text-align: center; padding: 4%;">
+                <p><b>Got from this website. <a href="https://www.imdb.com/title/tt6226232/">The young Sheldon</a></b></p>
+            </div>
         </article>
+        <br><br>
         <article class="jumbotron">
             <div class="row">
                 <div class="col-md-6">
                     <h3>Ready to order your favourite pizza?</h3>
                 </div>
                 <div class="col-md-6">
-                    <span class="btn btn-primary">ORDER</span>
+                    <span class="btn btn-primary"><a href="#pizza-size" style="color: white; text-decoration-line: none;">ORDER</a></span>
                 </div>
             </div>
         </article>
-        <article id="pizza-size">
-            <h3>Pick the size of pizza you want delivered</h3>
-            <form action="" class="pizza-sizes">
-                <input type="radio" id="small-size" class="size">
-                <label for="small-size">Small</label>
-                <input type="radio" id="medium-size" class="size">
-                <label for="medium-size">Medium Size</label>
-                <input type="radio" id="large-size" class="size">
-                <a href="#detail-size">Check the pizza prices</a>
-            </form>
-            <span class="get-to-topping">Get to <a href="#pizza-topping">The toppings we got for you.</a></span>
-            <div id="detail-size">
-                <p>Each Inn got their own magic, Our magic is to feed you the pizza you want to eat at a cheaper price.</p>
-                <p>These are the prices before you choose your prefered topping and the favourite crust you want on your pizza</p>
-                <ul>
-                    <li>Small pizza size costs &dollar; 2</li>
-                    <li>Medium pizza size costs &dollar; 3</li>
-                    <li>Largest pizza costs &dollar; 5.5</li>
-                </ul>
+        <article id="pizza-size" class="card">
+            <div class="card-header">
+                <h2>Pick the size of pizza you want delivered</h2>
             </div>
-        </article>
-        <article id="pizza-topping">
-            <form action="" class="pizza-toppings">
-                <select name="toppings" id="pizza-toppers">
-                    <option value="pepperoni">Pepperoni</option>
-                    <option value="mushroom">Mushroom</option>
-                    <option value="onions">Onions</option>
-                    <option value="sausages">Sausage</option>
-                    <option value="bacon">Bacon</option>
-                    <option value="extra-cheese">Extra Cheese</option>
-                    <option value="black-olives">Black Olives</option>
-                    <option value="green-peppers">Green peppers</option>
-                    <option value="pineapple">Pineapple</option>
-                    <option value="spinach">Spinach</option>
-                </select>
-            </form>
-            <span>Check the pricing <a href="#detail-topping">here</a></span>
-            <div id="detail-topping">
-                <p>Favourite pizza always is signified by the topping it has. Choose according to your taste. Here we list the most ordered pizza favourite toppings in descending order.</p>
-                <ul>
-                    <li>Pepperoni</li>
-                    <li>Mushrooms</li>
-                    <li>Onions</li>
-                    <li>Sausage</li>
-                    <li>Bacon</li>
-                    <li>Extra Cheese</li>
-                    <li>Black olives</li>
-                    <li>Green Peppers</li>
-                    <li>Pineapple</li>
-                    <li>Spinach</li>
-                </ul>
-                <span>Know more about toppings <a href="https://www.huffpost.com/entry/popular-pizza-toppings_n_4261085">here</a>. Our pricing is fair. The most expensive topping is Pepperoni at &dollar; 7.5 for on the largest size and &dollar; 3.25 on the smallest size.</span>
-            </div>
-        </article>
-        <article>
-            <h1>What pizza crust do you choose?</h1>
-            <form action="" class="pizza-crusts">
-                <select name="" id="pizza-crust">
-                    <option value="fast-food">Fast Food pizza</option>
-                    <option value="Cheese-stuffed">Cheese stuffed </option>
-                    <option value="pizza-bagels">Pizza bagels</option>
-                    <option value="flat-bread">Flat Bread</option>
-                    <option value="thin-crust">Thin Crust</option>
-                    <option value="sicilian-style">Sicilian Style</option>
-                    <option value="chicago-deep">Chicago Deep Dish</option>
-                    <option value="Neopolitan">Neopolitan Crust</option>
-                    <option value="NY-Style">NY Style pizza</option>
-                </select>
-            </form>
-            <span>Check out the crust types <a href="">Here.</a><b> A pick-a-crust that favors the occassion</b></span>
-            <p>NY Styles is the most amazing crust to use and so it is the most expensive. It goes at &dollar; 2 on the largest pizze size and &dollar; 1.15 on the smallest pizza size</p>
-        </article>
-        <!--Here we list the orders done by the user-->
-        <article class="detailed">
-            <div class="row">
+            <div class="padd-up row">
                 <div class="col-md-6">
-                    <p>You selected the following</p>
-                    <ul class="order-list">
-                        
+                    <form action="" class="pizza-sizes">
+                        <input type="radio" id="small-size" class="size" name="pizza-size">
+                        <label for="small-size">Small-sized-pizza</label>
+                        <br>
+                        <input type="radio" id="medium-size" class="size" name="pizza-size">
+                        <label for="medium-size">Medium Sized-pizza</label>
+                        <br>
+                        <input type="radio" id="large-size" class="size" name="pizza-size">
+                        <label for="large-size">Large-sized-pizza</label>
+                        <br>
+                        <a href="#detail-size">Check the pizza prices</a>
+                    </form>
+                    <span class="get-to-topping">Get to <a href="#pizza-topping">The toppings we got for you.</a></span>
+                </div>
+                <div class="col-md-6">
+                    <div id="detail-size">
+                        <p>Each Inn got their own magic, Our magic is to feed you the pizza you want to eat at a cheaper price.</p>
+                        <p>These are the prices before you choose your prefered topping and the favourite crust you want on your pizza</p>
+                        <ul>
+                            <li>Small pizza size costs &dollar; 2</li>
+                            <li>Medium pizza size costs &dollar; 3</li>
+                            <li>Largest pizza costs &dollar; 5.5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <br>
+        <article id="pizza-topping" class="card">
+            <div class="card-header">
+                <h2>Choose your favourite topping</h2>
+            </div>
+            <br><br>
+            <div class="padd-up">
+                <form action="" class="pizza-toppings">
+                    <select name="toppings" id="pizza-toppers">
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="mushroom">Mushroom</option>
+                        <option value="onions">Onions</option>
+                        <option value="sausages">Sausage</option>
+                        <option value="bacon">Bacon</option>
+                        <option value="extra-cheese">Extra Cheese</option>
+                        <option value="black-olives">Black Olives</option>
+                        <option value="green-peppers">Green peppers</option>
+                        <option value="pineapple">Pineapple</option>
+                        <option value="spinach">Spinach</option>
+                    </select>
+                </form>
+                <span>Check the pricing <a href="#detail-topping">here</a></span>
+                <div id="detail-topping">
+                    <p>Favourite pizza always is signified by the topping it has. Choose according to your taste. Here we list the most ordered pizza favourite toppings in descending order.</p>
+                    <ul>
+                        <li>Pepperoni</li>
+                        <li>Mushrooms</li>
+                        <li>Onions</li>
+                        <li>Sausage</li>
+                        <li>Bacon</li>
+                        <li>Extra Cheese</li>
+                        <li>Black olives</li>
+                        <li>Green Peppers</li>
+                        <li>Pineapple</li>
+                        <li>Spinach</li>
                     </ul>
+                    <span>Know more about toppings <a href="https://www.huffpost.com/entry/popular-pizza-toppings_n_4261085">here</a>. Our pricing is fair. The most expensive topping is Pepperoni at &dollar; 7.5 on the largest size and &dollar; 3.25 on the smallest size.</span>
                 </div>
-                <div class="col-md-6">
-                    <p>Pizza Size: <span id="selected-size"></span></p>
-                    <p>Pizza Crust: <span id="selected-crust"></span></p>
-                    <p>Pizza topping <span id="selected-topping"></span></p>
-                    <hr>
-                    <p>Total Price: <span id="total-price"></span></p>
-                    <p>Do you want to make an order</p>
-                    <span class="btn btn-danger">Not Now</span>
-                    <span class="btn btn-primary">Order</span>
-                </div>
-            </div>  
+            </div>
         </article>
-        <article>
-            <p>Order Details</p>
-            <p>Number of orders: <span id="number-of-order"></span></p>
-            <p>The charge: <span id="cost-of-order"></span></p>
-            <p>Mode of payment: Cash on delivery</p>
+        <br>
+        <article class="card">
+            <div class="card-header">
+                <h1>What pizza crust do you choose?</h1>
+            </div>
+            <div class="padd-up">
+                <form action="" class="pizza-crusts">
+                    <select name="" id="pizza-crust">
+                        <option value="fast-food">Fast Food pizza</option>
+                        <option value="Cheese-stuffed">Cheese stuffed </option>
+                        <option value="pizza-bagels">Pizza bagels</option>
+                        <option value="flat-bread">Flat Bread</option>
+                        <option value="thin-crust">Thin Crust</option>
+                        <option value="sicilian-style">Sicilian Style</option>
+                        <option value="chicago-deep">Chicago Deep Dish</option>
+                        <option value="Neopolitan">Neopolitan Crust</option>
+                        <option value="NY-Style">NY Style pizza</option>
+                    </select>
+                </form>
+                <div class="detail-crust">
+                    <span>Check out the crust types <a href="">Here.</a><b> A pick-a-crust that favors the occassion</b></span>
+                    <p>NY Styles is the most amazing crust to use and so it is the most expensive. It goes at &dollar; 2 on the largest pizze size and &dollar; 1.15 on the smallest pizza size</p>
+                    </div>
+            </div>
         </article>
+        <br>
+        <!--Here we list the orders done by the user-->
+        <div class="row">
+            <div class="col-md-6">
+                <article class="detailed card">
+                    <div class="card-header">
+                         <h2>See Your Shopping cart</h2>
+                    </div>
+                    <div class="row padd-up">
+                        <div class="col-md-6">
+                            <p>You selected the following</p>
+                            <ul class="order-list">
+                                
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Pizza Size: <span id="selected-size">small</span></p>
+                            <p>Pizza Crust: <span id="selected-crust">Cheese-stuffed</span></p>
+                            <p>Pizza topping: <span id="selected-topping">Pepperoni</span></p>
+                            <hr>
+                            <p>Total Price: <span id="total-price">&dollar; 12</span></p>
+                            <p>Do you want to make an order</p>
+                            <span class="btn btn-danger">Not Now</span>
+                            <span class="btn btn-primary">Order</span>
+                        </div>
+                    </div>  
+                </article>
+            </div>
+            <br>
+            <div class="col-md-6">
+                <article class="card">
+                    <div class="card-header">
+                        <h3>Your order details</h3>
+                    </div>
+                    <div class="padd-up">
+                        <p>Order Details</p>
+                        <p>Number of orders: <span id="number-of-order"></span></p>
+                        <p>The charge: <span id="cost-of-order"></span></p>
+                        <p>Mode of payment: <b>Cash on delivery</b></p>
+                    </div>
+                </article>
+            </div>
+        </div>
     </main>
+    <br>
     <footer>
-        <p>Copyright &copy; 2021. All rights reserved <a href="the.merge.com">The Merge Inc.</a></p>
-        <p>Contact us</p>
-        <p>Tell: +2547 97 244 686, +2547 97 723 553</p>
-        <p>Mail: odiwuorgeoff50@gmail.com</p>
-        
-        <p>Go social</p>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Youtube</p>
+        <p style="text-align: center; font-size: larger; font-weight: bolder;">Copyright &copy; 2021. All rights reserved <a href="the.merge.com">The Merge Inc.</a></p>
+        <div class="row contact">
+            <div class="col-md-6">
+                <h3>Contact us</h3>
+                <p>Tell: +2547 97 244 686, +2547 97 723 553</p>
+                <p>Mail: <a href="odiwuorgeoff50@gmail.com">odiwuorgeoff50@gmail.com</a></p>
+            </div>
+            <div class="col-md-6">
+                <h3>Go social</h3>
+                <a href="https://www.facebook.com/geoff.odwor.1485/"><img src="./images/facebook.png" width="40px" alt="facebook"></a>
+                <br>
+                <br>
+                <a href="https://twitter.com/home"><img src="./images/twitter.png" width="40px" alt="twitter"></a>
+                <br>
+                <br>
+                <a href="https://www.youtube.com/watch?v=OUQr8lG45AU"><img src="./images/you_tube.png" width="40px" alt="youtube"></a>
+            </div>
+        </div>
     </footer>
     
 </body>
