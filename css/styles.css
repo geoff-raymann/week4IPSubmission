@@ -21,3 +21,12 @@ header {
 #our-title p {
     font-family:monospace;
 }
+.padd-up {
+    padding: 2%;
+}
+.jumbotron {
+    background-image: url(../images/our-pizza.jpg);
+    color: olivedrab;
+    text-align: center;
+    font-weight: bold;
+}
