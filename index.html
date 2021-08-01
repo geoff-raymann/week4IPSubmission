@@ -14,7 +14,7 @@
 <body>
     <header>
         <div id="our-title">
-            <h1 >The Merge Pizza Inn</h1>
+            <h1 >The MerGe Pizza Inn</h1>
             <p>Where Taste Kisses the Expectation!!</p>
         </div>  
     </header>
@@ -53,17 +53,19 @@
             </div>
             <div class="padd-up row">
                 <div class="col-md-6">
-                    <form action="" class="pizza-sizes">
-                        <input type="radio" id="small-size" class="size" name="pizza-size">
-                        <label for="small-size">Small-sized-pizza</label>
+                    <form action="" class="pizza">
+                        <input type="radio" id="small-size" value="Small" name="Pizza">
+                        <label for="small-size">Small</label>
                         <br>
-                        <input type="radio" id="medium-size" class="size" name="pizza-size">
-                        <label for="medium-size">Medium Sized-pizza</label>
+                        <input type="radio" id="medium-size" value="Medium" name="Pizza">
+                        <label for="medium-size">Medium</label>
                         <br>
-                        <input type="radio" id="large-size" class="size" name="pizza-size">
-                        <label for="large-size">Large-sized-pizza</label>
+                        <input type="radio" id="large-size" value="Large" name="Pizza">
+                        <label for="large-size">Large</label>
+                        <br>
                         <br>
                         <a href="#detail-size">Check the pizza prices</a>
+                        <br>
                     </form>
                     <span class="get-to-topping">Get to <a href="#pizza-topping">The toppings we got for you.</a></span>
                 </div>
@@ -87,19 +89,20 @@
             </div>
             <br><br>
             <div class="padd-up">
-                <form action="" class="pizza-toppings">
+                <form action="" class="pizza">
                     <select name="toppings" id="pizza-toppers">
-                        <option value="pepperoni">Pepperoni</option>
-                        <option value="mushroom">Mushroom</option>
-                        <option value="onions">Onions</option>
-                        <option value="sausages">Sausage</option>
-                        <option value="bacon">Bacon</option>
-                        <option value="extra-cheese">Extra Cheese</option>
-                        <option value="black-olives">Black Olives</option>
-                        <option value="green-peppers">Green peppers</option>
-                        <option value="pineapple">Pineapple</option>
-                        <option value="spinach">Spinach</option>
+                        <option value="Pepperoni">Pepperoni</option>
+                        <option value="Mushroom">Mushroom</option>
+                        <option value="Onions">Onions</option>
+                        <option value="Sausages">Sausage</option>
+                        <option value="Bacon">Bacon</option>
+                        <option value="Extra cheese">Extra Cheese</option>
+                        <option value="Black olives">Black Olives</option>
+                        <option value="Green peppers">Green peppers</option>
+                        <option value="Pineapple">Pineapple</option>
+                        <option value="Spinach">Spinach</option>
                     </select>
+                    <br><br>
                 </form>
                 <span>Check the pricing <a href="#detail-topping">here</a></span>
                 <div id="detail-topping">
@@ -126,63 +129,64 @@
                 <h1>What pizza crust do you choose?</h1>
             </div>
             <div class="padd-up">
-                <form action="" class="pizza-crusts">
+                <form action="" class="pizza">
                     <select name="" id="pizza-crust">
-                        <option value="fast-food">Fast Food pizza</option>
-                        <option value="Cheese-stuffed">Cheese stuffed </option>
-                        <option value="pizza-bagels">Pizza bagels</option>
-                        <option value="flat-bread">Flat Bread</option>
-                        <option value="thin-crust">Thin Crust</option>
-                        <option value="sicilian-style">Sicilian Style</option>
-                        <option value="chicago-deep">Chicago Deep Dish</option>
+                        <option value="Fast Food">Fast Food pizza</option>
+                        <option value="Cheese stuffed">Cheese stuffed </option>
+                        <option value="Pizza bagels">Pizza bagels</option>
+                        <option value="Flat bread">Flat Bread</option>
+                        <option value="Thin crust">Thin Crust</option>
+                        <option value="Sicilian style">Sicilian Style</option>
+                        <option value="Chicago deep">Chicago Deep Dish</option>
                         <option value="Neopolitan">Neopolitan Crust</option>
-                        <option value="NY-Style">NY Style pizza</option>
+                        <option value="New York Style">NY Style pizza</option>
                     </select>
+                    <br><br>
+                    <button class="btn btn-primary">Click here to proceed</button>
                 </form>
                 <div class="detail-crust">
                     <span>Check out the crust types <a href="">Here.</a><b> A pick-a-crust that favors the occassion</b></span>
-                    <p>NY Styles is the most amazing crust to use and so it is the most expensive. It goes at &dollar; 2 on the largest pizze size and &dollar; 1.15 on the smallest pizza size</p>
+                    <p>NY Styles is the most amazing crust to use and so it is the most expensive. It goes at &dollar; 2 on the largest pizza size and &dollar; 1.15 on the smallest pizza size</p>
                     </div>
             </div>
         </article>
         <br>
         <!--Here we list the orders done by the user-->
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 after-selection">
                 <article class="detailed card">
                     <div class="card-header">
-                         <h2>See Your Shopping cart</h2>
+                         <h2>Your Shopping Cart</h2>
                     </div>
                     <div class="row padd-up">
                         <div class="col-md-6">
-                            <p>You selected the following</p>
+                            <p>Your orders</p>
                             <ul class="order-list">
                                 
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <p>Pizza Size: <span id="selected-size">small</span></p>
-                            <p>Pizza Crust: <span id="selected-crust">Cheese-stuffed</span></p>
-                            <p>Pizza topping: <span id="selected-topping">Pepperoni</span></p>
+                            <p>Pizza Size:&nbsp;<span id="selected-size"></span></p>
+                            <p>Pizza Crust:&nbsp;<span id="selected-crust"></span></p>
+                            <p>Pizza topping:&nbsp;<span id="selected-topping"></span></p>
                             <hr>
-                            <p>Total Price: <span id="total-price">&dollar; 12</span></p>
-                            <p>Do you want to make an order</p>
-                            <span class="btn btn-danger">Not Now</span>
-                            <span class="btn btn-primary">Order</span>
+                            <p>Total Price:&nbsp;&dollar;<span id="total-price"> </span></p>
+                            <p>Do you want to make an order?</p>
+                            <span class="btn btn-primary confirm">Order</span>
                         </div>
                     </div>  
                 </article>
             </div>
             <br>
-            <div class="col-md-6">
+            <div class="col-md-6 after-order">
                 <article class="card">
                     <div class="card-header">
                         <h3>Your order details</h3>
                     </div>
-                    <div class="padd-up">
+                    <div class="padd-up delivery-messege">
                         <p>Order Details</p>
                         <p>Number of orders: <span id="number-of-order"></span></p>
-                        <p>The charge: <span id="cost-of-order"></span></p>
+                        <p>The charge: <span id="the-charge"></span></p>
                         <p>Mode of payment: <b>Cash on delivery</b></p>
                     </div>
                 </article>
