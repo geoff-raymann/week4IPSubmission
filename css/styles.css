@@ -65,7 +65,26 @@ footer {
         font-size: medium;
         color: olivedrab;
     }
+    footer {
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
 }
-@media screen and (min-width:300px){
 
+.after-selection {
+    display: none;
+}
+.after-order {
+    display: none;
+}
+.order {
+    cursor: pointer;
+    color: #0088cc;
+}
+.order:hover {
+    text-decoration: underline;
+}
+.hope-messege {
+    color: orangered;
+    font-weight: bolder;
+    font-style: italic;
 }
