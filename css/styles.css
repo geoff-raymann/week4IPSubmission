@@ -1,0 +1,23 @@
+header {
+    background-image: url(../images/merge-house.jpg);
+    color: aliceblue;
+    height: 200px;
+    text-align: center;
+    padding: 2%;
+    font-size: xx-large;
+    padding-top: 4%;
+    
+}
+
+#our-title {
+    background-color: cornsilk;
+    color: orangered;
+    width: 900px;
+    position: center;
+    margin-left: 200px;
+    height: 100px;
+    
+}
+#our-title p {
+    font-family:monospace;
+}
