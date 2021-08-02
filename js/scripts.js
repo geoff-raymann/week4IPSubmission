@@ -1,21 +1,34 @@
+
+//This Business Logic
 function Pizza(size) {
     this.size = size;
-    this.price = [2, 3, 5.5];
+    this.price = 5.5;
     this.toppings = [];
     this.crusts = [];
 }
 function Topping(name) {
     this.name = name;
-    this.prices = [5, 4.75, 4.60, 4.45, 4.35, 4.15, 4.05, 4.00, 3.95, 3.85];
+    this.price = 5.00;//[5, 4.75, 4.60, 4.45, 4.35, 4.15, 4.05, 4.00, 3.95, 3.85];
 }
 function Crust(name){
     this.name = name;
-    this.prices = [1.15, 1.20, 1.30, 1.35, 1.45, 1.50, 1.65, 1.75, 2.00];
+    this.price = 2.00//[1.15, 1.20, 1.30, 1.35, 1.45, 1.50, 1.65, 1.75, 2.00];
+}
+Pizza.prototype.priceOfPizzaSize = function(){
+    return this.price;
+}
+Topping.prototype.priceOfTopping = function(){
+    return this.price;
+}
+Crust.prototype.priceOfCrust = function(){
+    return this.price;
 }
 
+const deliveryCharge = 3;
 
 
 
+//The commented section was for practice during implementation.. . We will continue after submission since we were time out..
 
 // Pizza.prototype.priceOfSmall = 2;
 // Pizza.prototype.priceOfMedium = 3;
@@ -75,6 +88,8 @@ function Crust(name){
 // }
 
 
+
+
 //The user interface 
 $(document).ready(function(){
     $(".pizza").submit(function(event){
@@ -89,11 +104,9 @@ $(document).ready(function(){
         myPizza.toppings.push(newToppers);
         myPizza.crusts.push(newCrust);
 
+        var totalPrice = myPizza.priceOfPizzaSize() + newToppers.priceOfTopping() + newCrust.priceOfCrust();
 
-        // myPizza.prices.push(pizzaSizePrices);
-        // var priceOfPizzaSize = myPizza.pizzaPriceAccordingToSize();
-
-        console.log(myPizza.totalPrice());
+        var totalDeliveryPrice = totalPrice + deliveryCharge;
         
         $(".after-selection").show();
         $(".order-list").append("<li><span class='order'>"+myPizza.size+" sized pizza with "+myPizza.toppings[0].name+" topping and a "+myPizza.crusts[0].name+" crust"+"</span></li>");
@@ -102,7 +115,7 @@ $(document).ready(function(){
             $("#selected-size").text(myPizza.size);
             $("#selected-crust").text(myPizza.crusts[0].name);
             $("#selected-topping").text(myPizza.toppings[0].name);
-            $("#total-price").text(myPizza.totalPrice());
+            $("#total-price").text(totalPrice);
         })
 
         $('.confirm').click(function(){
@@ -112,8 +125,10 @@ $(document).ready(function(){
                 deliver = true;
                 var getRegion = prompt("Enter your region ");
                 $(".after-order").show();
-                $("#number-of-order").text("The count of orders made by the user");
-                $("#the-charge").text("The charge for all the orders");
+                $("#number-of-order").text("You can do another order!");
+                $("#the-charge-of-pizza").text("    "+totalPrice);
+                $("#the-charge-of-delivery").text("    "+deliveryCharge);
+                $("#order-charge").text("   "+totalDeliveryPrice)
                 $(".delivery-messege").append("<p class='hope-messege'> Hello, you have placed an order and your pizzas will be delivered to "+getRegion+" after 5 hours. We wish you a merry celebration!!");
             }
             else {
@@ -128,41 +143,3 @@ $(document).ready(function(){
         
     });
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var myTop = new Topping("Pepperoni",3.25);
-// var mycrust = new Crust("New York Style",2);
-// //Pizza.toppings.push(myTop);
-// //Pizza.crusts.push(mycrust);
-// var myPizza = new Pizza("Small", 2);
-// console.log(myPizza);
-// myPizza.toppings.push(myTop);
-// myPizza.crusts.push(mycrust);
-// console.log(myPizza);
-
-// myPizza.toppings.forEach(function(topping){
-//     console.log(myPizza.size+"  USD "+myPizza.price);
-//     console.log(typeof(myPizza.price));
-//     console.log(topping.name, topping.price)
-//     myPizza.crusts.forEach(function(crust){
-//         console.log(crust.name, crust.price);
-//     })
-// });
-
-// var totalCostofMyPizza = myPizza.totalPrice();
-// console.log("You  will pay: USD "+totalCostofMyPizza);
